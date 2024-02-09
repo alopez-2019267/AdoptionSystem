@@ -1,5 +1,5 @@
-import mongoose from "mongoose";
-import user from ""
+import mongoose, { Schema } from "mongoose";
+
 const animalSchema = mongoose.Schema({
     name: {
         type: String,
@@ -17,11 +17,11 @@ const animalSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    username: {
-        type: String,
+    keeper: {
+        type: Schema.ObjectId, //type: mongoose.Schema.Types.ObjectId,                   //ref: 'Course',
         unique: true,
-        lowercase: true,
-        required: true
+        required: true,
+        ref: 'user'
     }
 })
 

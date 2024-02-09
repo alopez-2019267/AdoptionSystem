@@ -10,7 +10,7 @@ export const test =(req, res)=>{
 
 export const register = async(req, res) => {
     try{
-        //Capturar el formario (body)
+        //Capturar el formulario (body)
         let data = req.body
         console.log(data)
         //Encriptar la constraseña 
